@@ -1,4 +1,4 @@
 # Conway's Game of Life
 
-## Input images
+## Screenshot
 ![Images](https://raw.githubusercontent.com/lbasek/game-of-life-conway/master/ScreenShot.png)
