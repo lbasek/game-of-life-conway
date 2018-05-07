@@ -40,9 +40,7 @@ function initField () {
     console.log(evt.clientX / cellSize + ',' + evt.clientY / cellSize)
   }, false)
 
-  for (let i = 0; i < n; i++) {
-    for (let j = 0; j < m; j++) { field[i][j] = 0 }
-  }
+  resetFiled()
 
   drawField()
 }
@@ -109,6 +107,14 @@ function initRandom () {
   drawField()
 }
 
+/**
+ C   N                  new C
+ 1   0,1             ->  0  # Lonely
+ 1   4,5,6,7,8       ->  0  # Overcrowded
+ 1   2,3             ->  1  # Lives
+ 0   3               ->  1  # It takes three to give birth!
+ 0   0,1,2,4,5,6,7,8 ->  0  # Barren
+ **/
 function updateField () {
   if (stopped) return
 
@@ -121,13 +127,6 @@ function updateField () {
     newFiled[i] = []
     for (j = 0; j < m; j++) { newFiled[i][j] = 0 }
   }
-
-  // C   N                  new C
-  // 1   0,1             ->  0  # Lonely
-  // 1   4,5,6,7,8       ->  0  # Overcrowded
-  // 1   2,3             ->  1  # Lives
-  // 0   3               ->  1  # It takes three to give birth!
-  // 0   0,1,2,4,5,6,7,8 ->  0  # Barren
 
   for (i = 1; i < n - 1; i++) {
     for (j = 1; j < m - 1; j++) {
