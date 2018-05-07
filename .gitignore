@@ -564,3 +564,5 @@ dist
 #files
 *.tgz
 *.log
+
+.DS_Store
