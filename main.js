@@ -168,6 +168,12 @@ function resetFiled () {
 }
 
 function toggleGrid () {
+  if (grid === true) {
+    console.log('Hide Grid!')
+  } else {
+    console.log('Show Grid!')
+  }
+
   grid = !grid
 
   if (stopped) {
