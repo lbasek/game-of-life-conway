@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "electron": "^7.2.4",
+    "electron": "^13.6.6",
     "electron-debug": "^1.5.0",
     "electron-default-menu": "^1.0.1",
     "npm": "^6.14.6",
